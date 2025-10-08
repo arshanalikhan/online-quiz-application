@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen">
+        <div class="container">
+            <div class="welcome-content">
+                <h1 class="welcome-title">🧠 Online Quiz Challenge</h1>
+                <div class="welcome-info">
+                    <p class="welcome-description">
+                        Test your knowledge across multiple subjects including Science, Technology, History, Geography, and more!
+                    </p>
+                    <div class="quiz-instructions">
+                        <h3>Quiz Instructions:</h3>
+                        <ul>
+                            <li>📝 You'll answer 10 multiple choice questions</li>
+                            <li>⏱️ Total time limit: 10 minutes</li>
+                            <li>⏳ Each question has a 30-second timer</li>
+                            <li>✅ Get immediate feedback after each answer</li>
+                            <li>🎯 Score 70% or higher to pass</li>
+                            <li>⚡ Quick answers (within 15 seconds) earn bonus points</li>
+                        </ul>
+                    </div>
+                    <button id="start-quiz-btn" class="btn btn--primary btn--lg">
+                        Start Quiz
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen hidden">
+        <div class="container">
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <span id="question-counter" class="question-counter">Question 1 of 10</span>
+                    <div class="timer-container">
+                        <span class="timer-label">Time:</span>
+                        <span id="overall-timer" class="timer">10:00</span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <div class="question-container">
+                    <div class="question-header">
+                        <span id="question-category" class="question-category"></span>
+                        <div class="question-timer-container">
+                            <span class="question-timer-label">Question Time:</span>
+                            <span id="question-timer" class="question-timer">30</span>
+                        </div>
+                    </div>
+                    <h2 id="question-text" class="question-text"></h2>
+                </div>
+
+                <div id="options-container" class="options-container">
+                    <!-- Options will be populated by JavaScript -->
+                </div>
+
+                <div class="quiz-actions">
+                    <button id="skip-btn" class="btn btn--outline">Skip Question</button>
+                </div>
+            </div>
+
+            <!-- Feedback Modal -->
+            <div id="feedback-modal" class="modal hidden">
+                <div class="modal-content">
+                    <div id="feedback-content" class="feedback-content">
+                        <!-- Feedback content will be populated by JavaScript -->
+                    </div>
+                    <button id="next-question-btn" class="btn btn--primary">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen hidden">
+        <div class="container">
+            <div class="results-content">
+                <h1 class="results-title">🎉 Quiz Complete!</h1>
+                
+                <div class="score-container">
+                    <div class="main-score">
+                        <span id="score-percentage" class="score-percentage">0%</span>
+                        <span id="score-fraction" class="score-fraction">(0/10)</span>
+                    </div>
+                    <div id="performance-message" class="performance-message"></div>
+                </div>
+
+                <div class="results-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Time Taken:</span>
+                        <span id="time-taken" class="stat-value">0:00</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Correct Answers:</span>
+                        <span id="correct-answers" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Incorrect Answers:</span>
+                        <span id="incorrect-answers" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Skipped Questions:</span>
+                        <span id="skipped-questions" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Bonus Points:</span>
+                        <span id="bonus-points" class="stat-value">0</span>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="review-answers-btn" class="btn btn--secondary btn--lg">Review Answers</button>
+                    <button id="retry-quiz-btn" class="btn btn--primary btn--lg">Retry Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Screen -->
+    <div id="review-screen" class="screen hidden">
+        <div class="container">
+            <div class="review-header">
+                <h1>📋 Answer Review</h1>
+                <button id="back-to-results-btn" class="btn btn--outline">Back to Results</button>
+            </div>
+            <div id="review-content" class="review-content">
+                <!-- Review content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
