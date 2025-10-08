@@ -31,3 +31,29 @@ Visit the live application: [https://yourusername.github.io/online-quiz-applicat
 5. Get instant feedback and final results
 
 ## 🏗️ Project Structure
+
+online-quiz-application/
+├── index.html # Main HTML file
+├── style.css # CSS styling
+├── app.js # JavaScript functionality
+└── README.md # Project documentation
+
+## 🎓 Educational Purpose
+
+This project was developed as part of a capstone project to demonstrate:
+- Modern web development practices
+- API integration and error handling
+- Responsive design principles
+- User experience optimization
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+## 📧 Contact
+
+- GitHub: [@arshanalikhan](https://github.com/arshanalikhan)
